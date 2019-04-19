@@ -1,3 +1,10 @@
+export const flex = {
+    display: "flex"
+}
+export const flexColumn = {
+    display: "flex",
+    flexDirection: "column"
+}
 export const flexCenter = {
     display: "flex",
     justifyContent: "center",
@@ -26,4 +33,7 @@ export const alignSpaceAround = {
 export const alignSpaceBetween = {
     display: "flex",
     alignItems: "space-between"
+}
+export const flexGrow = {
+    flex: 1
 }

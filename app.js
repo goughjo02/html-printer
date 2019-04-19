@@ -14,6 +14,7 @@ new class PrinterApp extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
     this.browser = await puppeteer.launch();
+    // This is the express root endpoint
     app.get('/', async (req, res) => {
       this.reqMeter.mark()
       const page = await this.browser.newPage();

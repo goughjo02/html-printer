@@ -1,8 +1,8 @@
 export const picture = {
-    height: "100px",
-    width: "auto"
+    height: "auto",
+    maxWidth: "120px"
 }
 export const image = {
-    height: "100px",
-    width: "auto"
+    height: "auto",
+    width: "100%"
 }
