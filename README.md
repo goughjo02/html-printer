@@ -39,11 +39,36 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
  ![pm2-example](./examples-images/query-example.png)
 
 **urlencoded** body is for page details
+
+`{ [key: string] : string }`
+
  ![pm2-example](./examples-images/body-example.png)
 
  # Develop Template
 
  What is printed is `build/index.html`. 
+
+ For dynamically inserted data - the id of the target div must match the key in the body.
+
+ for example this data: 
+
+ ````js
+ {
+   name: "Donald"
+ }
+ ````
+
+ would target div
+
+ ````html
+ <div id="name"></div>
+ ````
+
+ and convert it to 
+
+ ````html
+ <div id="name">Donald</div>
+ ````
 
  This project uses webpack to transpile es6 into es5. See `webpack.config.js`.
  
@@ -57,4 +82,5 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
   ````
 
   Then you can visit the html file in the browser and design.
+
 
