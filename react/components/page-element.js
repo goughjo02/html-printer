@@ -1,7 +1,6 @@
 import React from "react";
 import injectSheet from 'react-jss';
-import { a4, blackBorder, card, letter } from "../styles";
-import Basic from "./basic";
+import { a4, blackBorder, card, marginXAuto, marginTop32, letter } from "../styles";
 
 const styles = {
     a4: {
@@ -10,11 +9,15 @@ const styles = {
     },
     card: {
         ...card,
-        ...blackBorder
+        ...blackBorder,
+        ...marginXAuto,
+        ...marginTop32
     },
     letter: {
         ...letter,
-        ...blackBorder
+        ...blackBorder,
+        ...marginXAuto,
+        ...marginTop32
     },
 }
 class Component extends React.Component {
@@ -27,7 +30,7 @@ class Component extends React.Component {
     componentWillMount() {
         const { classes } = this.props;
         var urlParams = new URLSearchParams(location.search);
-        console.log(urlParams.get('size') === "letter")
+        // console.log(urlParams.get('size') === "letter")
         if (urlParams.get('size') === "a4") {
             this.setState({ classSize: classes.a4 })
         } else if (urlParams.get('size') === "card") {
@@ -41,9 +44,7 @@ class Component extends React.Component {
     render() {
         return (
             <div id="root" className={this.state.classSize}>
-                hello world
-                {this.state.classSize}
-                <Basic />
+                {this.props.children}
             </div>
         )
     }
@@ -52,4 +53,4 @@ class Component extends React.Component {
 // Finally, inject the stylesheet into the component.
 const StyledComponent = injectSheet(styles)(Component)
 
-export default StyledComponent;
+export { StyledComponent as PageSize };

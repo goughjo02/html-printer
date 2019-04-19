@@ -35,6 +35,8 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
   - puppeteer print to pdf
   - close the page
 
+  `localhost:2000?size=card&pageSize=a4`
+
 **Quary Parameters** are intended for content size and print page size
  ![pm2-example](./examples-images/query-example.png)
 

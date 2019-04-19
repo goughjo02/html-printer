@@ -7,8 +7,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 module.exports = {
     // Uncomment this for hot rebuild
-    // watch: true,
-    entry: './react',
+    watch: true,
+    entry: './react/basic',
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'page-builder.bundle.js'
@@ -23,9 +23,15 @@ module.exports = {
                 }
             },
             {
-              test: /\.css$/,
-              use: ['style-loader', 'css-loader'],
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     },
     plugins: [htmlPlugin]
