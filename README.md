@@ -25,7 +25,7 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
 
  ![pm2-example](./examples-images/pm2-example.png)
 
- # Api functional brief
+ # API
 
  The process manager will start one browser session and hold reference to it. Each request will follow these steps:
  
