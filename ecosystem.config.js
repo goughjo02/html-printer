@@ -4,7 +4,7 @@ module.exports = {
     script: 'app.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-    ignore_watch: ["build"],
+    ignore_watch: ["build", "result.pdf", "README.md", "webpack.config.js", ".gitignore", ".babelrc"],
     args: 'one two',
     instances: 1,
     autorestart: true,
