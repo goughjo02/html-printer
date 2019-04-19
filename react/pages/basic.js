@@ -6,8 +6,9 @@ const styles = {}
 const Component = () => {
     return (
         <div id="basic_root">
-        <div id="firstname"></div>
-        <div id="email"></div>
+            <div id="firstName"></div>
+            <div id="lastName"></div>
+            <div id="email"></div>
         </div>
     )
 }
