@@ -5,9 +5,9 @@ import { a4, blackBorder, card, letter } from "../styles";
 const styles = {}
 const Component = () => {
     return (
-        <div id="root" className={this.state.classSize}>
-            hello world
-                {this.state.classSize}
+        <div id="basic_root">
+        <div id="firstname"></div>
+        <div id="email"></div>
         </div>
     )
 }

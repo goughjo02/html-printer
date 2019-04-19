@@ -15,11 +15,13 @@
 
  # Process Manager (pm2)
 
-The set-up for the process manager is in `ecoststem.config.js`. The defines the entry point for this process ac `app.js`.  `app.js` does the following:
+The set-up for the process manager is in `ecoststem.config.js`. This defines the entry point for this process as `app.js`.  `app.js` does the following:
 
  - Implements a [pm2 Entrypoint](https://pm2.io/doc/en/runtime/guide/entrypoint/)
  - Launches an headless browser using [puppeteer](https://github.com/GoogleChrome/puppeteer)
  - Launches an [express app](https://expressjs.com/) to interact with puppeteer
+
+ To Develop `pm2 start --watch` enables hot reload.
 
  # Api functional brief
 

@@ -1,6 +1,7 @@
 import React from "react";
 import injectSheet from 'react-jss';
 import { a4, blackBorder, card, letter } from "../styles";
+import Basic from "./basic";
 
 const styles = {
     a4: {
@@ -27,14 +28,14 @@ class Component extends React.Component {
         const { classes } = this.props;
         var urlParams = new URLSearchParams(location.search);
         console.log(urlParams.get('size') === "letter")
-        if(urlParams.get('size') === "a4"){
-            this.setState({classSize: classes.a4})
+        if (urlParams.get('size') === "a4") {
+            this.setState({ classSize: classes.a4 })
         } else if (urlParams.get('size') === "card") {
-            this.setState({classSize: classes.card});
+            this.setState({ classSize: classes.card });
         } else if (urlParams.get('size') === "letter") {
-            this.setState({classSize: classes.letter})
+            this.setState({ classSize: classes.letter })
         } else {
-            this.setState({classSize: classes.a4});
+            this.setState({ classSize: classes.a4 });
         }
     }
     render() {
@@ -42,6 +43,7 @@ class Component extends React.Component {
             <div id="root" className={this.state.classSize}>
                 hello world
                 {this.state.classSize}
+                <Basic />
             </div>
         )
     }
