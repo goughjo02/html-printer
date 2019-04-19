@@ -25,4 +25,17 @@ The api is using [express](https://expressjs.com/).
  What is printed is `build/index.html`. 
 
  This project is set up to use react. The react code is in the `react/` directory. `npm run dev` will bundle the es6 javascript and index.html in the react folder, into es5 javascript code in the `build/` directory.
+
+  While developing, consider setting
+  ````js
+  {
+    // ...
+    watch: true,
+  }
+  ````
+
+  in `webpack.config.js` - this will enable hot-rebuild.
+
+  Then you can visit the html file in the browser and design.
+
   
