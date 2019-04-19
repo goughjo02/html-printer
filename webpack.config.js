@@ -6,9 +6,9 @@ const htmlPlugin = new HtmlWebPackPlugin({
     filename: "./index.html"
 });
 module.exports = {
-    entry: './react',
     // Uncomment this for hot rebuild
     // watch: true,
+    entry: './react',
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'page-builder.bundle.js'

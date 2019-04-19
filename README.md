@@ -8,13 +8,17 @@
 
 # Usage
 
- - `pm2 start` - begin process manager.
- - `pm2 monit` (**optional**) will show process manager output.
- - GET `localhost:2000` and the print will be triggered.
+ - `pm2 start` - begin process manager
+ - `pm2 monit` (**optional**) will show process manager output
+ - GET `localhost:2000` and the print will be triggered
 
  # Process Manager (pm2)
 
-The set-up for the process manager is in `ecoststem.config.js`. The defines the entry point for this process ac `app.js`.  `app.js` implements a [pm2 Entrypoint](https://pm2.io/doc/en/runtime/guide/entrypoint/). This launches an headless browser using [puppeteer](https://github.com/GoogleChrome/puppeteer) and an [express app](https://expressjs.com/) which interacts with puppeteer.
+The set-up for the process manager is in `ecoststem.config.js`. The defines the entry point for this process ac `app.js`.  `app.js` does the following:
+
+ - Implements a [pm2 Entrypoint](https://pm2.io/doc/en/runtime/guide/entrypoint/)
+ - Launches an headless browser using [puppeteer](https://github.com/GoogleChrome/puppeteer)
+ - Launches an [express app](https://expressjs.com/) to interact with puppeteer
 
  # Api functional brief
 
