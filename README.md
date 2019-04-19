@@ -1,15 +1,16 @@
 # html-printer
 
-# Installation
+# First Time Install
 
- - clone this repository
+ - `git clone https://github.com/goughjo02/html-printer.git`
  - `cd html-printer`
  - `npm install`
+ - `npm run build`
 
 # Usage
 
- - `pm2 start` - begin process manager
- - `pm2 monit` (**optional**) will show process manager output
+ - `pm2 start` begins process manager
+ - (**optional**) `pm2 monit` will show process manager output
  - GET `localhost:2000` and the print will be triggered
 
  # Process Manager (pm2)
