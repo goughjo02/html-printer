@@ -38,6 +38,10 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
   `localhost:2000?size=card&pageSize=a4`
 
 **Quary Parameters** are intended for content size and print page size
+
+ - page size options: 'A4', 'Card', 'Letter'
+ - size options: 'A4', 'Card', 'Letter'
+
  ![pm2-example](./examples-images/query-example.png)
 
 **urlencoded** body is for page details

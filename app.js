@@ -18,8 +18,16 @@ new class PrinterApp extends io.Entrypoint {
     app.get('/', async (req, res) => {
       this.reqMeter.mark()
       const page = await this.browser.newPage();
-      await page.goto(url, { waitUntil: 'networkidle0' });
-      const { body } = req;
+      const { body, query } = req;
+      const { size, pageSize } = query;
+      let address = `${url}?size=${size}&pageSize=${pageSize}`;
+      for (var key of Object.keys(query)) {
+        if (query.hasOwnProperty(key)) {
+          continue;
+        }
+        address = address + `${key}=${query}&`
+      }
+      await page.goto(address, { waitUntil: 'networkidle0' });
       for (var key of Object.keys(body)) {
         if (body.hasOwnProperty(key)) {
           const edit_element = await page.evaluate(async (pagekey, urlbody) => {

@@ -39,9 +39,9 @@ const BasicContent = ({ classes }) => {
     return (
         <div id="basic_root" className={classes.root}>
             <div className={classes.lhs}>
-                <div id="firstname" className={classes.contentRow}>Homer</div>
-                <div id="lastname" className={classes.contentRow}>Simpson</div>
-                <div id="sector" className={classes.contentRow}>Sector 7C</div>
+                <div id="firstname" className={classes.contentRow}></div>
+                <div id="lastname" className={classes.contentRow}></div>
+                <div id="sector" className={classes.contentRow}></div>
             </div>
             <div className={classes.rhs}>
                 <div className={classes.picture}>
