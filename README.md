@@ -23,6 +23,10 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
 
  To Develop `pm2 start --watch` enables hot reload.
 
+ ![pm2-example](./examples-images/pm2-example.png)
+ ![pm2-example](./examples-images/query-example.png)
+ ![pm2-example](./examples-images/body-example.png)
+
  # Api functional brief
 
  The process manager will start one browser session and hold reference to it. Each request will follow these steps:
@@ -32,6 +36,10 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
   - directly edit some html
   - puppeteer print to pdf
   - close the page
+
+**Quary Parameters** are intended for content size and print page size
+
+**urlencoded** body is for page details
 
  # Develop Template
 
