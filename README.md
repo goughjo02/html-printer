@@ -1,41 +1,45 @@
 # html-printer
 
-This project uses a nodejs process manager, [pm2](https://pm2.io/doc/en/runtime/overview/).
+# Installation
 
-The api is using [express](https://expressjs.com/).
+ - clone this repository
+ - `cd html-printer`
+ - `npm install`
 
 # Usage
 
-`pm2 start` will begin the process manager:
- - launches a headless browser using [puppeteer](https://github.com/GoogleChrome/puppeteer)
- - opens a new page and navigates to the html file
- - defines an express app endpoint for printing a pdf
- - begins the express app listening
+ - `pm2 start` - begin process manager.
+ - `pm2 monit` (**optional**) will show process manager output.
+ - GET `localhost:2000` and the print will be triggered.
 
- `pm2 monit` (**optional**) will show process manager output including console logs.
+ # Process Manager (pm2)
 
- in a webbrowser, navigate to `localhost:2000` and the print will be triggered.
+The set-up for the process manager is in `ecoststem.config.js`. The defines the entry point for this process ac `app.js`.  `app.js` implements a [pm2 Entrypoint](https://pm2.io/doc/en/runtime/guide/entrypoint/). This launches an headless browser using [puppeteer](https://github.com/GoogleChrome/puppeteer) and an [express app](https://expressjs.com/) which interacts with puppeteer.
 
  # Api functional brief
 
- The process will start one browser session. Each request will navigate to a page, directly edit some html, and print to pdf.
+ The process manager will start one browser session and hold reference to it. Each request will follow these steps:
+ 
+  - open a new page
+  - navigate to the specified url
+  - directly edit some html
+  - puppeteer print to pdf
+  - close the page
 
- # Design
+ # Develop Template
 
  What is printed is `build/index.html`. 
 
- This project is set up to use react. The react code is in the `react/` directory. `npm run dev` will bundle the es6 javascript and index.html in the react folder, into es5 javascript code in the `build/` directory.
+ This project uses webpack to transpile es6 into es5. See `webpack.config.js`.
+ 
+ This defines `react/index.html` and `react/index.js` as inputs and `build/index.html` and `page-builder.bundle.js` as the output. `npm run dev` triggers the transpilation.
 
-  While developing, consider setting
+  Uncomment this line in `webpack.config.js` to enable hot-rebuild (not hot-reload).
   ````js
   {
-    // ...
-    watch: true,
+    // watch: true,
   }
   ````
 
-  in `webpack.config.js` - this will enable hot-rebuild.
-
   Then you can visit the html file in the browser and design.
 
-  
