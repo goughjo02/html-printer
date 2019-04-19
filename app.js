@@ -18,8 +18,25 @@ new class PrinterApp extends io.Entrypoint {
       async (req, res) => {
         this.reqMeter.mark()
         const page = await browser.newPage();
-        // const { query } = req;
-        console.log(req.body);
+        const { body } = req;
+        for (var key of Object.keys(body)) {
+            if (body.hasOwnProperty(key)) {
+              const edit_element = await page.evaluate((pagekey, urlbody) => {
+                const element = document.querySelector(`#${pagekey}`)
+                try {
+                  element.innerHTML = urlbody[pagekey]
+                } catch(err) {
+                  console.log(err)
+                }
+                console.log(element)
+                console.log(element)
+                console.log(pagekey + " = " + urlbody[pagekey]);
+                return element
+                // return pagekey + " = " + urlbody[pagekey];
+              }, key, body);
+              console.log(edit_element)
+            }
+        }
         // for (let key in query) {
         //   if (!query.hasOwnProperty(key)) {
         //       continue;
@@ -35,9 +52,9 @@ new class PrinterApp extends io.Entrypoint {
         //   }
         // }
         await page.goto(url, { waitUntil: 'networkidle0' });
-        const body = await page.evaluate(() => {
-          document.querySelector('#root').innerHTML = 'editted text';
-        });
+        // const body = await page.evaluate(() => {
+        //   document.querySelector('#root').innerHTML = 'editted text';
+        // });
         await page.pdf({ path: 'result.pdf', format: 'A4' });
         await page.close();
         res.send('Hello From Entrypoint.js')
