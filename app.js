@@ -1,36 +1,30 @@
 const io = require('@pm2/io')
 const app = require('express')()
 const puppeteer = require('puppeteer');
-
+// settings
 const port = 2000
+const url = 'file:///Users/joe/NodeApplications/html-printer/build/index.html';
 
-console.log('whats up');
 
-new class MyApp extends io.Entrypoint {
+new class PrinterApp extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
-    console.log('hello');
     const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    var test = function () {
-      return "test tring";
-    }
-    await page.goto('file:///Users/joe/NodeApplications/html-printer/build/index.html', { waitUntil: 'networkidle0' });
-    const http = require('http').Server(app)
-    app.get('/', async (req, res) => {
-      this.reqMeter.mark()
-      await page.goto('file:///Users/joe/NodeApplications/html-printer/build/index.html', { waitUntil: 'networkidle0' });
-
-      const body = await page.evaluate(() => {
-        document.querySelector('#root').innerHTML = 'editted text';
+    app.get('/',
+      async (req, res) => {
+        this.reqMeter.mark()
+        const page = await browser.newPage();
+        await page.goto(url, { waitUntil: 'networkidle0' });
+        const body = await page.evaluate(() => {
+          document.querySelector('#root').innerHTML = 'editted text';
+        });
+        await page.pdf({ path: 'result.pdf', format: 'A4' });
+        await page.close();
+        res.send('Hello From Entrypoint.js')
       });
-      await page.pdf({ path: 'result.pdf', format: 'A4' });
-      res.send('Hello From Entrypoint.js')
-    });
-
     this.server = app.listen(port, () => {
-      console.log(`Example app listening on port ${port}!`)
-      cb()
+      console.log(`Example app listening on port ${port}!`);
+      cb();
     })
   }
 
