@@ -1,47 +1,24 @@
 const pm2 = require('pm2');
-const { apps } = require('./ecosystem.config');
+// const { apps } = require('./ecosystem.config');
+var request = require('request');
 
 
-pm2.start(apps[0], function (err, app) {
-    if (err) {
-        console.error(err);
-        return pm2.disconnect();
-    }
-    console.log('Process app.js has been started');
-});
 
-// pm2.delete('all', function (err) {
-//     if (err) {
-//         console.error(err);
-//         pm2.start(apps[0], function (err, app) {
-//             if (err) {
-//                 console.error(err);
-//                 return pm2.disconnect();
-//             }
-//             console.log('Process app.js has been started');
-//         });
-//     }
-//     pm2.start(apps[0], function (err, app) {
-//         if (err) {
-//             console.error(err);
-//             return pm2.disconnect();
-//         }
-//         console.log('Process app.js has been started');
-//     });
-//     // pm2.restart('app.js', function (err, app) {
-//     //     if (err) {
-//     //         console.error(err);
-//     //         return pm2.disconnect();
-//     //     }
-//     //     console.log('Process Restarted');
-//     //     return pm2.disconnect();
-//     // });
-// });
-
-var step;
-for (step = 0; step < 5; step++) {
-    // Runs 5 times, with values of step 0 through 4.
+function doStuff() {
     console.log('Walking east one step');
-}
-
-// console.log(instance)
+    setTimeout(function () {
+      request.post({
+          url: 'http://localhost:2000?size=card&pageSize=A4',
+          form: {
+              firstname: 'Hello',
+              lastname: 'worls',
+              email: 'really hope this works'
+          }
+      }, function (err, httpResponse, body) {
+          console.log(err);
+          // console.log(httpResponse);
+          // console.log(body);
+      })
+    }, 1000);
+ }
+ setInterval(doStuff, 500);

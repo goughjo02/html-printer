@@ -10,6 +10,7 @@ const url = 'file:///Users/joe/NodeApplications/html-printer/build/basic.html';
 new class PrinterApp extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
+    this.count = 0;
     this.title = "My Printer App"
     this.browser = await puppeteer.launch();
     const page = await this.browser.newPage();
@@ -18,7 +19,7 @@ new class PrinterApp extends io.Entrypoint {
       extended: true
     }));
     // This is the express root endpoint
-    this.app.get('/', async (req, res) => {
+    this.app.post('/', async (req, res) => {
       const page = await this.browser.newPage();
       const { body, query } = req;
       const { size, pageSize } = query;
@@ -29,6 +30,7 @@ new class PrinterApp extends io.Entrypoint {
         }
         address = address + `${key}=${query}&`
       }
+      // await this.createPrint(page, address, body);
       await page.goto(address, { waitUntil: 'networkidle0' });
       for (var key of Object.keys(body)) {
         if (body.hasOwnProperty(key)) {
@@ -44,9 +46,14 @@ new class PrinterApp extends io.Entrypoint {
           // console.log(edit_element)
         }
       }
-      await page.pdf({ path: 'result.pdf', format: 'A4' });
+      const result = await page.pdf({ path: `./result.pdf`, format: 'A4' });
       await page.close();
-      res.send('Seems good')
+      this.count ++;
+      console.log(this.count);
+      res.send({
+        status: 'seems ok',
+        result
+      })
     });
     this.server = this.app.listen(port, () => {
       console.log(`Example app listening on port ${port}!`);

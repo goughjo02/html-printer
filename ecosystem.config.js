@@ -2,6 +2,7 @@ module.exports = {
   apps : [{
     name: 'html-printer',
     script: 'app.js',
+    instance_var: "INSTANCE_ID",
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
