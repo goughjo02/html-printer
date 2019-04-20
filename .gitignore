@@ -1,4 +1,5 @@
 node_modules
 # build
-result.pdf
+./result.pdf
 .DS_STORE
+result.pdf
