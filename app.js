@@ -57,6 +57,7 @@ const app = new class PrinterApp extends io.Entrypoint {
   // This is the very last method called on exit || uncaught exception
   onStop(err, cb, code, signal) {
     this.browser.close();
+    this.server.close();
     console.log(`App has exited with code ${code}`)
   }
 
