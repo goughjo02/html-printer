@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./react/basic/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./react/basic/large.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1173,27 +1173,15 @@ eval("module.exports = __webpack_require__.p + \"6a23e7c00a1b4f48b0ca85f1a92d7cc
 
 /***/ }),
 
-/***/ "./react/basic/content.js":
-/*!********************************!*\
-  !*** ./react/basic/content.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactJss = __webpack_require__(/*! react-jss */ \"./node_modules/react-jss/lib/index.js\");\n\nvar _reactJss2 = _interopRequireDefault(_reactJss);\n\nvar _donaldDuck = __webpack_require__(/*! ../assets/donald-duck.jpg */ \"./react/assets/donald-duck.jpg\");\n\nvar _donaldDuck2 = _interopRequireDefault(_donaldDuck);\n\nvar _styles = __webpack_require__(/*! ../styles */ \"./react/styles/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar styles = {\n    root: _extends({}, _styles.flex, _styles.fullHeight),\n    lhs: _extends({}, _styles.flexGrow, _styles.paddingX16, _styles.paddingY16, _styles.flexColumn, _styles.flexCenter),\n    rhs: _extends({\n        flex: \"0 0 120px\"\n    }, _styles.flexCenter),\n    contentRow: _extends({}, _styles.paddingY16),\n    picture: _styles.picture,\n    image: _styles.image\n};\nvar BasicContent = function BasicContent(_ref) {\n    var classes = _ref.classes;\n\n    return _react2.default.createElement(\n        'div',\n        { id: 'basic_root', className: classes.root },\n        _react2.default.createElement(\n            'div',\n            { className: classes.lhs },\n            _react2.default.createElement('div', { id: 'firstname', className: classes.contentRow }),\n            _react2.default.createElement('div', { id: 'lastname', className: classes.contentRow }),\n            _react2.default.createElement('div', { id: 'email', className: classes.contentRow })\n        ),\n        _react2.default.createElement(\n            'div',\n            { className: classes.rhs },\n            _react2.default.createElement(\n                'div',\n                { className: classes.picture },\n                _react2.default.createElement('img', { src: _donaldDuck2.default,\n                    className: classes.image,\n                    alt: 'Homer Simpson' })\n            )\n        )\n    );\n};\n\n// Finally, inject the stylesheet into the component.\nvar StyledComponent = (0, _reactJss2.default)(styles)(BasicContent);\n\nexports.default = StyledComponent;\n\n//# sourceURL=webpack:///./react/basic/content.js?");
-
-/***/ }),
-
-/***/ "./react/basic/index.js":
+/***/ "./react/basic/large.js":
 /*!******************************!*\
-  !*** ./react/basic/index.js ***!
+  !*** ./react/basic/large.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _content = __webpack_require__(/*! ./content */ \"./react/basic/content.js\");\n\nvar _content2 = _interopRequireDefault(_content);\n\nvar _components = __webpack_require__(/*! ../components */ \"./react/components/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Main = function Main() {\n    return _react2.default.createElement(\n        _components.PageSize,\n        null,\n        _react2.default.createElement(_content2.default, null)\n    );\n};\n\n_reactDom2.default.render(_react2.default.createElement(Main, null), document.getElementById(\"index\"));\n\n//# sourceURL=webpack:///./react/basic/index.js?");
+eval("\n\nvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _reactJss = __webpack_require__(/*! react-jss */ \"./node_modules/react-jss/lib/index.js\");\n\nvar _reactJss2 = _interopRequireDefault(_reactJss);\n\nvar _components = __webpack_require__(/*! ../components */ \"./react/components/index.js\");\n\nvar _donaldDuck = __webpack_require__(/*! ../assets/donald-duck.jpg */ \"./react/assets/donald-duck.jpg\");\n\nvar _donaldDuck2 = _interopRequireDefault(_donaldDuck);\n\nvar _styles = __webpack_require__(/*! ../styles */ \"./react/styles/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar styles = {\n    root: _extends({}, _styles.flex, _styles.fullHeight),\n    lhs: _extends({}, _styles.flexGrow, _styles.paddingX16, _styles.paddingY16, _styles.flexColumn, _styles.flexCenter),\n    rhs: _extends({\n        flex: \"0 0 120px\"\n    }, _styles.flexCenter),\n    contentRow: _extends({}, _styles.paddingY16),\n    picture: _styles.picture,\n    image: _styles.image\n};\nvar BasicContent = function BasicContent(_ref) {\n    var classes = _ref.classes;\n\n    return _react2.default.createElement(\n        _components.PageSize,\n        null,\n        _react2.default.createElement(\n            \"div\",\n            { id: \"basic_root\", className: classes.root },\n            _react2.default.createElement(\n                \"div\",\n                { className: classes.lhs },\n                _react2.default.createElement(\"div\", { id: \"firstname\", className: classes.contentRow }),\n                _react2.default.createElement(\"div\", { id: \"lastname\", className: classes.contentRow }),\n                _react2.default.createElement(\"div\", { id: \"email\", className: classes.contentRow })\n            ),\n            _react2.default.createElement(\n                \"div\",\n                { className: classes.rhs },\n                _react2.default.createElement(\n                    \"div\",\n                    { className: classes.picture },\n                    _react2.default.createElement(\"img\", { src: _donaldDuck2.default,\n                        className: classes.image,\n                        alt: \"Homer Simpson\" })\n                )\n            )\n        )\n    );\n};\n\n// Finally, inject the stylesheet into the component.\nvar StyledComponent = (0, _reactJss2.default)(styles)(BasicContent);\n\n_reactDom2.default.render(_react2.default.createElement(StyledComponent, null), document.getElementById(\"index\"));\n\n//# sourceURL=webpack:///./react/basic/large.js?");
 
 /***/ }),
 
