@@ -7,7 +7,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 module.exports = {
     // Uncomment this for hot rebuild
-    watch: true,
+    // watch: true,
     entry: './react/basic',
     output: {
         path: path.resolve(__dirname, 'build'),
