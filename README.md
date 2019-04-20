@@ -1,5 +1,11 @@
 # html-printer
 
+This project uses:
+
+ - [pm2](https://pm2.io/doc/en//) as a process manager
+ - [puppeteer](https://github.com/GoogleChrome/puppeteer) to run headless browser
+ - [express](https://expressjs.com/) to expose an enpoint which interacts with puppeteer
+
 # First Time Install
 
  - `git clone https://github.com/goughjo02/html-printer.git`
@@ -15,13 +21,16 @@
 
  # Process Manager (pm2)
 
-The set-up for the process manager is in `ecoststem.config.js`. This defines the entry point for this process as `app.js`.  `app.js` does the following:
+Config for pm2 - `ecoststem.config.js`. 
+Process entry file, `app.js`, does the following:
 
  - Implements a [pm2 Entrypoint](https://pm2.io/doc/en/runtime/guide/entrypoint/)
  - Launches an headless browser using [puppeteer](https://github.com/GoogleChrome/puppeteer)
  - Launches an [express app](https://expressjs.com/) to interact with puppeteer
 
- To Develop `pm2 start --watch` enables hot reload.
+`pm2 start` runs the process
+`pm2 monit` brings up the pm2 monitor
+`pm2 kill` to stop pm2 
 
  ![pm2-example](./examples-images/pm2-example.png)
 
@@ -60,20 +69,27 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
 
  ````js
  {
-   name: "Donald"
+   firstname: "Donald",
+   lastname: "Duck",
+   email: "donnyd@feathermail.com"
+
  }
  ````
 
  would target div
 
  ````html
- <div id="name"></div>
+ <div id="firstname"></div>
+ <div id="lastname"></div>
+ <div id="email"></div>
  ````
 
  and convert it to 
 
  ````html
- <div id="name">Donald</div>
+ <div id="firstname">Donald</div>
+ <div id="lastname">Duck</div>
+ <div id="email">donnyd@feathermail.com</div>
  ````
 
  ![result-example](./examples-images/example-result.png)
