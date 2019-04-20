@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import injectSheet from 'react-jss';
 import { PageSize } from "../components";
-import ProfilePicture from '../assets/donal-duck.png';
+import ProfilePicture from '../assets/donald-duck.jpg';
 import {
     picture,
     image,

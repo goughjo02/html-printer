@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({
 }));
 // settings
 const port = 2000
-const url = 'file:///Users/joe/NodeApplications/html-printer/build/basicSmall.html';
+const url = 'file:///Users/joe/NodeApplications/html-printer/build/basic.html';
 
 
 new class PrinterApp extends io.Entrypoint {
