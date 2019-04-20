@@ -76,6 +76,8 @@ The set-up for the process manager is in `ecoststem.config.js`. This defines the
  <div id="name">Donald</div>
  ````
 
+ ![result-example](./examples-images/example-result.png)
+
  This project uses webpack to transpile es6 into es5. See `webpack.config.js`.
  
  This defines `react/index.html` and `react/index.js` as inputs and `build/index.html` and `page-builder.bundle.js` as the output. `npm run dev` triggers the transpilation.

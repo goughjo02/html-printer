@@ -1,6 +1,6 @@
 import React from "react";
 import injectSheet from 'react-jss';
-import ProfilePicture from '../assets/homer-simpson.png';
+import ProfilePicture from '../assets/donald-duck.jpg';
 import {
     picture,
     image,
@@ -41,7 +41,7 @@ const BasicContent = ({ classes }) => {
             <div className={classes.lhs}>
                 <div id="firstname" className={classes.contentRow}></div>
                 <div id="lastname" className={classes.contentRow}></div>
-                <div id="sector" className={classes.contentRow}></div>
+                <div id="email" className={classes.contentRow}></div>
             </div>
             <div className={classes.rhs}>
                 <div className={classes.picture}>
