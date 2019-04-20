@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import injectSheet from 'react-jss';
 import { PageSize } from "../components";
-import ProfilePicture from '../assets/homer-simpson.png';
+import ProfilePicture from '../assets/donal-duck.png';
 import {
     picture,
     image,
@@ -50,7 +50,7 @@ const BasicContent = ({ classes }) => {
                     <div className={classes.picture}>
                         <img src={ProfilePicture}
                             className={classes.image}
-                            alt="Homer Simpson" />
+                            alt="Donal Duck" />
                     </div>
                 </div>
             </div>

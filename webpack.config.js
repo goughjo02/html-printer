@@ -5,13 +5,11 @@ module.exports = {
     // Uncomment this for hot rebuild
     // watch: true,
     entry:{
-        basicSmall: './react/basic/small',
-        basicMedium: './react/basic/medium',
-        basicLarge: './react/basic/large'
+        basic: './react/basic'
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: '[name]/bundle.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -37,18 +35,8 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./react/index.html",
-            filename: "./basicSmall.html",
-            chunks: ['basicSmall']
-        }),
-        new HtmlWebPackPlugin({
-            template: "./react/index.html",
-            filename: "./basicMedium.html",
-            chunks: ['basicMedium']
-        }),
-        new HtmlWebPackPlugin({
-            template: "./react/index.html",
-            filename: "./basicLarge.html",
-            chunks: ['basicLarge']
+            filename: "./basic.html",
+            chunks: ['basic']
         })
     ]
 };
