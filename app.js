@@ -7,7 +7,7 @@ const port = 2000
 const url = 'file:///Users/joe/NodeApplications/html-printer/build/basic.html';
 
 
-const app = new class PrinterApp extends io.Entrypoint {
+new class PrinterApp extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
     this.title = "My Printer App"
@@ -73,7 +73,3 @@ const app = new class PrinterApp extends io.Entrypoint {
     })
   }
 }
-
-module.exports = {
-  app
-};
