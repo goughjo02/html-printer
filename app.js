@@ -1,22 +1,24 @@
 const io = require('@pm2/io')
 const puppeteer = require('puppeteer');
 const bodyParser = require('body-parser');
-const app = require('express')()
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+const express = require('express')
 // settings
 const port = 2000
 const url = 'file:///Users/joe/NodeApplications/html-printer/build/basic.html';
 
 
-new class PrinterApp extends io.Entrypoint {
+const app = new class PrinterApp extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
+    this.title = "My Printer App"
     this.browser = await puppeteer.launch();
+    const page = await this.browser.newPage();
+    this.app = express();
+    this.app.use(bodyParser.urlencoded({
+      extended: true
+    }));
     // This is the express root endpoint
-    app.get('/', async (req, res) => {
-      this.reqMeter.mark()
+    this.app.get('/', async (req, res) => {
       const page = await this.browser.newPage();
       const { body, query } = req;
       const { size, pageSize } = query;
@@ -44,9 +46,9 @@ new class PrinterApp extends io.Entrypoint {
       }
       await page.pdf({ path: 'result.pdf', format: 'A4' });
       await page.close();
-      res.send('Hello From Entrypoint.js')
+      res.send('Seems good')
     });
-    this.server = app.listen(port, () => {
+    this.server = this.app.listen(port, () => {
       console.log(`Example app listening on port ${port}!`);
       cb();
     })
@@ -70,3 +72,7 @@ new class PrinterApp extends io.Entrypoint {
     })
   }
 }
+
+module.exports = {
+  app
+};
