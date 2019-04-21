@@ -1,4 +1,3 @@
-const io = require('@pm2/io')
 const puppeteer = require('puppeteer');
 var path = require('path');
 const args = require('yargs').argv;
@@ -21,12 +20,9 @@ expected_fields.forEach(e => {
   address = address + `${e}=${args[e]}&`
 })
 
-
-new class BasicPrinter extends io.Entrypoint {
-  // This is the very first method called on startup
-  async onStart(cb) {
-    this.browser = await puppeteer.launch();
-    const page = await this.browser.newPage();
+const main = async function() {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
     await page.goto(address, { waitUntil: 'networkidle0' });
     let editArray = [];
     expected_fields.forEach(async e => {
@@ -39,24 +35,7 @@ new class BasicPrinter extends io.Entrypoint {
     const resolvedfinalArray = await Promise.all(editArray); // resolving all promises
     const result = await page.pdf({ path: `./result.pdf`, format: 'A4' });
     await page.close();
-    await this.browser.close();
-    cb()
-  }
-
-  // This is the very last method called on exit || uncaught exception
-  onStop(err, cb, code, signal) {
-    console.log(`App has exited with code ${code}`)
-  }
-
-  // Here we declare some process metrics
-  sensors() {
-    this.reqMeter = this.io.meter('req/min');
-  }
-
-  // Here are some actions to interact with the app in live
-  actuators() {
-    this.io.action('getEnv', (reply) => {
-      reply({ server: this.server })
-    })
-  }
+    await browser.close();
 }
+
+main();
