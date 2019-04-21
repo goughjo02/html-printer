@@ -16,12 +16,13 @@ const expected_fields = [
 new class BasicPrinter extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
+    this.browser = await puppeteer.connect({browserURL : 'testing'});
     address = address + `?size=${args.size}&pageSize=${args.pageSize}`;
     expected_fields.forEach(e => {
         address = address + `${e}=${args[e]}&`
     })
-    this.browser = await puppeteer.connect(address, { browserURL: address });
-    await page.waitFor(1000);
+    const page = await this.browser.newPage();
+    await page.goto(address, { waitUntil: 'networkidle0' });
     expected_fields.forEach(async e => {
           const edit_element = await page.evaluate((div_id, div_content) => {
             const element = document.querySelector(`#${div_id}`)
@@ -35,11 +36,11 @@ new class BasicPrinter extends io.Entrypoint {
     })
     const result = await page.pdf({ path: `./result.pdf`, format: 'A4' });
     await page.close();
+    this.browser.disconnect();
   }
 
   // This is the very last method called on exit || uncaught exception
   onStop(err, cb, code, signal) {
-    this.browser.close();
     console.log(`App has exited with code ${code}`)
   }
 

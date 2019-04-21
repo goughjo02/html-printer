@@ -20,7 +20,6 @@ async function doPrint() {
           args: "--size card --pageSize a4 --firstName Donald --lastName Duck --email donnyd@feathermail.com"
         }, function(err, apps) {
           console.log('started');
-          pm2.disconnect();   // Disconnects from PM2
           if (err) throw err
         });
       });
