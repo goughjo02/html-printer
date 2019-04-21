@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import injectSheet from 'react-jss';
 import { PageSize } from "../components";
-import ProfilePicture from '../assets/donald-duck.jpg';
+import ProfilePicture from '../images/donald-duck.jpg';
 import {
     picture,
     image,
@@ -42,8 +42,8 @@ const BasicContent = ({ classes }) => {
         <PageSize>
             <div id="basic_root" className={classes.root}>
                 <div className={classes.lhs}>
-                    <div id="firstname" className={classes.contentRow}></div>
-                    <div id="lastname" className={classes.contentRow}></div>
+                    <div id="firstName" className={classes.contentRow}></div>
+                    <div id="lastName" className={classes.contentRow}></div>
                     <div id="email" className={classes.contentRow}></div>
                 </div>
                 <div className={classes.rhs}>

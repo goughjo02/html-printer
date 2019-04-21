@@ -1,70 +1,45 @@
 const io = require('@pm2/io')
 const puppeteer = require('puppeteer');
-const bodyParser = require('body-parser');
-const express = require('express')
-// settings
-const port = 2000
-const url = 'file:///Users/joe/NodeApplications/html-printer/build/basic.html';
+var path = require('path');
+const args = require('yargs').argv;
 
+const basic_html = "build/basic.html";
+let address = 'file:///' + path.resolve(__dirname, basic_html);
+const expected_fields = [
+  'size',
+  'pageSize',
+  'firstName',
+  'lastName',
+  'email'
+]
 
-new class PrinterApp extends io.Entrypoint {
+new class BasicPrinter extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
-    this.count = 0;
-    this.title = "My Printer App"
-    this.browser = await puppeteer.launch();
-    const page = await this.browser.newPage();
-    this.app = express();
-    this.app.use(bodyParser.urlencoded({
-      extended: true
-    }));
-    // This is the express root endpoint
-    this.app.post('/', async (req, res) => {
-      const page = await this.browser.newPage();
-      const { body, query } = req;
-      const { size, pageSize } = query;
-      let address = `${url}?size=${size}&pageSize=${pageSize}`;
-      for (var key of Object.keys(query)) {
-        if (query.hasOwnProperty(key)) {
-          continue;
-        }
-        address = address + `${key}=${query}&`
-      }
-      // await this.createPrint(page, address, body);
-      await page.goto(address, { waitUntil: 'networkidle0' });
-      for (var key of Object.keys(body)) {
-        if (body.hasOwnProperty(key)) {
-          const edit_element = await page.evaluate(async (pagekey, urlbody) => {
-            const element = document.querySelector(`#${pagekey}`)
+    address = address + `?size=${args.size}&pageSize=${args.pageSize}`;
+    expected_fields.forEach(e => {
+        address = address + `${e}=${args[e]}&`
+    })
+    this.browser = await puppeteer.connect(address, { browserURL: address });
+    await page.waitFor(1000);
+    expected_fields.forEach(async e => {
+          const edit_element = await page.evaluate((div_id, div_content) => {
+            const element = document.querySelector(`#${div_id}`)
             try {
-              element.innerHTML = urlbody[pagekey]
+              element.innerHTML = div_content
             } catch (err) {
               return err
             }
             return element
-          }, key, body);
-          // console.log(edit_element)
-        }
-      }
-      const result = await page.pdf({ path: `./result.pdf`, format: 'A4' });
-      await page.close();
-      this.count ++;
-      console.log(this.count);
-      res.send({
-        status: 'seems ok',
-        result
-      })
-    });
-    this.server = this.app.listen(port, () => {
-      console.log(`Example app listening on port ${port}!`);
-      cb();
+          }, e, args[e]);
     })
+    const result = await page.pdf({ path: `./result.pdf`, format: 'A4' });
+    await page.close();
   }
 
   // This is the very last method called on exit || uncaught exception
   onStop(err, cb, code, signal) {
     this.browser.close();
-    this.server.close();
     console.log(`App has exited with code ${code}`)
   }
 

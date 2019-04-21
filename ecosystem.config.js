@@ -1,11 +1,11 @@
 module.exports = {
   apps : [{
-    name: 'puppeteer-browser',
+    name: 'PUPPETEER',
     script: 'puppeteer-browser.js',
     instance_var: "INSTANCE_ID",
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-    // args: 'one two',
+    args: 'size pagesize firstname lastname email',
     instances: 1,
     autorestart: true,
     watch: false,

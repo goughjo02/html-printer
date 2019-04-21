@@ -1,24 +1,23 @@
-const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    // Uncomment this for hot rebuild
-    // watch: true,
-    entry:{
+    entry: {
         basic: './react/basic'
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'build/'),
+        // publicPath: "/build/",
         filename: '[name].js'
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: "babel-loader",
+                options: { presets: ["@babel/env"] }
             },
             {
                 test: /\.css$/,
@@ -27,16 +26,28 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader'
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'images',
+                        },
+                    },
                 ]
             }
         ]
     },
+    devServer: {
+        contentBase: path.join(__dirname, "public"),
+        port: 3000,
+        publicPath: "http://localhost:3000/build/",
+        hotOnly: true
+    },
     plugins: [
-        new HtmlWebPackPlugin({
-            template: "./react/index.html",
-            filename: "./basic.html",
-            chunks: ['basic']
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'basic.html',
+            template: 'react/index.html'
         })
     ]
 };
