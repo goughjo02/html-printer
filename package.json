@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "dev-server": "pm2 start --watch && pm2 monit",
+    "server": "pm2 start server.js",
     "test": "jest"
   },
   "author": "JG",
@@ -14,12 +14,14 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "express": "^4.16.4",
     "pm2": "^3.5.0",
     "puppeteer": "^1.14.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.5.0",
     "react-jss": "^8.6.1",
+    "serve-static": "^1.13.2",
     "yargs": "^13.2.2"
   },
   "devDependencies": {
