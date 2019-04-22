@@ -19,7 +19,7 @@ const oneRun = function (run_number, cb) {
 
 const multiRuns = function (shot_interval) {
     let count = 0;
-    const max = 50;
+    const max = 1000;
     let completed = 0;
     let results = "run_number, time(ms) \r\n";
     return new Promise((resolve, reject) => {
@@ -41,9 +41,9 @@ const multiRuns = function (shot_interval) {
     })
 }
 
-multiRuns(750).then(results => {
+multiRuns(350).then(results => {
     // console.log(results)
-    fs.writeFile("./results/basic-results.csv", results, function (err) {
+    fs.writeFile("./results/delay-350ms-1000-prints-results.csv", results, function (err) {
         if (err) {
             return console.log(err);
         }
@@ -51,5 +51,12 @@ multiRuns(750).then(results => {
     });
 })
 
-
+const test_times = [
+    // 1000,
+    750,
+    500,
+    // 400,
+    // 300,
+    // 250
+]
 
