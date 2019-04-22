@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "1db7b200a2217f1f2085";
+/******/ 	var hotCurrentHash = "7bb7ed98b0025bb664b2";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -788,10 +788,141 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./react/basic/index.js")(__webpack_require__.s = "./react/basic/index.js");
+/******/ 	return hotCreateRequire("./develop-react/basic/index.js")(__webpack_require__.s = "./develop-react/basic/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./develop-react/basic/index.js":
+/*!**************************************!*\
+  !*** ./develop-react/basic/index.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-jss */ \"./node_modules/react-jss/lib/index.js\");\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components */ \"./develop-react/components/index.js\");\n/* harmony import */ var _images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/donald-duck.jpg */ \"./develop-react/images/donald-duck.jpg\");\n/* harmony import */ var _images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles */ \"./develop-react/styles/index.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n\n\nvar styles = {\n  root: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_5__[\"flex\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"fullHeight\"]),\n  lhs: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexGrow\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"paddingX16\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"paddingY16\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexColumn\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexCenter\"]),\n  rhs: _objectSpread({\n    flex: \"0 0 120px\"\n  }, _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexCenter\"]),\n  contentRow: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_5__[\"paddingY16\"]),\n  picture: _styles__WEBPACK_IMPORTED_MODULE_5__[\"picture\"],\n  image: _styles__WEBPACK_IMPORTED_MODULE_5__[\"image\"]\n};\n\nvar BasicContent = function BasicContent(_ref) {\n  var classes = _ref.classes;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__[\"PageSize\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"basic_root\",\n    className: classes.root\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: classes.lhs\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"firstName\",\n    className: classes.contentRow\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"lastName\",\n    className: classes.contentRow\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"email\",\n    className: classes.contentRow\n  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: classes.rhs\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: classes.picture\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,\n    className: classes.image,\n    alt: \"Donal Duck\"\n  })))));\n}; // Finally, inject the stylesheet into the component.\n\n\nvar StyledComponent = react_jss__WEBPACK_IMPORTED_MODULE_2___default()(styles)(BasicContent);\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledComponent, null), document.getElementById(\"index\"));\n\n//# sourceURL=webpack:///./develop-react/basic/index.js?");
+
+/***/ }),
+
+/***/ "./develop-react/components/index.js":
+/*!*******************************************!*\
+  !*** ./develop-react/components/index.js ***!
+  \*******************************************/
+/*! exports provided: PageSize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-element */ \"./develop-react/components/page-element.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"PageSize\", function() { return _page_element__WEBPACK_IMPORTED_MODULE_0__[\"PageSize\"]; });\n\n\n\n//# sourceURL=webpack:///./develop-react/components/index.js?");
+
+/***/ }),
+
+/***/ "./develop-react/components/page-element.js":
+/*!**************************************************!*\
+  !*** ./develop-react/components/page-element.js ***!
+  \**************************************************/
+/*! exports provided: PageSize */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PageSize\", function() { return StyledComponent; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ \"./node_modules/react-jss/lib/index.js\");\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles */ \"./develop-react/styles/index.js\");\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\nvar styles = {\n  a4: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_2__[\"a4\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"blackBorder\"]),\n  card: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_2__[\"card\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"blackBorder\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginXAuto\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginTop32\"]),\n  letter: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_2__[\"letter\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"blackBorder\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginXAuto\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginTop32\"])\n};\n\nvar Component =\n/*#__PURE__*/\nfunction (_React$Component) {\n  _inherits(Component, _React$Component);\n\n  function Component(props) {\n    var _this;\n\n    _classCallCheck(this, Component);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Component).call(this, props));\n    _this.state = {\n      classSize: null\n    };\n    return _this;\n  }\n\n  _createClass(Component, [{\n    key: \"componentWillMount\",\n    value: function componentWillMount() {\n      var classes = this.props.classes;\n      var urlParams = new URLSearchParams(location.search);\n      console.log(urlParams.get('size') === \"card\");\n\n      if (urlParams.get('size') === \"A4\") {\n        this.setState({\n          classSize: classes.a4\n        });\n      } else if (urlParams.get('size') === \"card\") {\n        this.setState({\n          classSize: classes.card\n        });\n      } else if (urlParams.get('size') === \"letter\") {\n        this.setState({\n          classSize: classes.letter\n        });\n      } else {\n        this.setState({\n          classSize: classes.a4\n        });\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var classes = this.props.classes;\n      var urlParams = new URLSearchParams(location.search);\n      var className;\n      console.log(urlParams.get('size'));\n      var _iteratorNormalCompletion = true;\n      var _didIteratorError = false;\n      var _iteratorError = undefined;\n\n      try {\n        for (var _iterator = urlParams[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n          var p = _step.value;\n          console.log(p);\n        }\n      } catch (err) {\n        _didIteratorError = true;\n        _iteratorError = err;\n      } finally {\n        try {\n          if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n            _iterator[\"return\"]();\n          }\n        } finally {\n          if (_didIteratorError) {\n            throw _iteratorError;\n          }\n        }\n      }\n\n      console.log(urlParams.get('size') === \"card\");\n\n      if (urlParams.get('size') === \"a4\") {\n        // this.setState({ classSize: classes.a4 })\n        className = classes.a4;\n      } else if (urlParams.get('size') === \"card\") {\n        // this.setState({ classSize: classes.card });\n        className = classes.card;\n      } else if (urlParams.get('size') === \"letter\") {\n        // this.setState({ classSize: classes.letter })\n        className = classes.letter;\n      } else {\n        // this.setState({ classSize: classes.a4 });\n        className = classes.a4;\n      }\n\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        id: \"loadedRoot\",\n        className: className\n      }, this.props.children);\n    }\n  }]);\n\n  return Component;\n}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // Finally, inject the stylesheet into the component.\n\n\nvar StyledComponent = react_jss__WEBPACK_IMPORTED_MODULE_1___default()(styles)(Component);\n\n\n//# sourceURL=webpack:///./develop-react/components/page-element.js?");
+
+/***/ }),
+
+/***/ "./develop-react/images/donald-duck.jpg":
+/*!**********************************************!*\
+  !*** ./develop-react/images/donald-duck.jpg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"../images/donald-duck.jpg\";\n\n//# sourceURL=webpack:///./develop-react/images/donald-duck.jpg?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/border.js":
+/*!****************************************!*\
+  !*** ./develop-react/styles/border.js ***!
+  \****************************************/
+/*! exports provided: blackBorder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"blackBorder\", function() { return blackBorder; });\nvar blackBorder = {\n  border: \"1px solid black\",\n  boxSizing: \"border-box\"\n};\n\n//# sourceURL=webpack:///./develop-react/styles/border.js?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/flexbox.js":
+/*!*****************************************!*\
+  !*** ./develop-react/styles/flexbox.js ***!
+  \*****************************************/
+/*! exports provided: flex, flexColumn, flexCenter, justifyCenter, justifyContentSpaceAround, justifyContentSpaceBetween, alignCenter, alignSpaceAround, alignSpaceBetween, flexGrow */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flex\", function() { return flex; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flexColumn\", function() { return flexColumn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flexCenter\", function() { return flexCenter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"justifyCenter\", function() { return justifyCenter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceAround\", function() { return justifyContentSpaceAround; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceBetween\", function() { return justifyContentSpaceBetween; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alignCenter\", function() { return alignCenter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceAround\", function() { return alignSpaceAround; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceBetween\", function() { return alignSpaceBetween; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flexGrow\", function() { return flexGrow; });\nvar flex = {\n  display: \"flex\"\n};\nvar flexColumn = {\n  display: \"flex\",\n  flexDirection: \"column\"\n};\nvar flexCenter = {\n  display: \"flex\",\n  justifyContent: \"center\",\n  alignItems: \"center\"\n};\nvar justifyCenter = {\n  display: \"flex\",\n  justifyContent: \"center\"\n};\nvar justifyContentSpaceAround = {\n  display: \"flex\",\n  justifyContent: \"space-around\"\n};\nvar justifyContentSpaceBetween = {\n  display: \"flex\",\n  justifyContent: \"space-between\"\n};\nvar alignCenter = {\n  display: \"flex\",\n  alignItems: \"center\"\n};\nvar alignSpaceAround = {\n  display: \"flex\",\n  alignItems: \"space-around\"\n};\nvar alignSpaceBetween = {\n  display: \"flex\",\n  alignItems: \"space-between\"\n};\nvar flexGrow = {\n  flex: 1\n};\n\n//# sourceURL=webpack:///./develop-react/styles/flexbox.js?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/index.js":
+/*!***************************************!*\
+  !*** ./develop-react/styles/index.js ***!
+  \***************************************/
+/*! exports provided: a4, card, letter, fullHeight, fullWidth, blackBorder, flex, flexColumn, flexCenter, justifyCenter, justifyContentSpaceAround, justifyContentSpaceBetween, alignCenter, alignSpaceAround, alignSpaceBetween, flexGrow, picture, image, marginXAuto, marginTop32, paddingY32, paddingX32, paddingY16, paddingX16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_size__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-size */ \"./develop-react/styles/page-size.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"a4\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"a4\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"card\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"card\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"letter\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"letter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"fullHeight\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"fullHeight\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"fullWidth\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"fullWidth\"]; });\n\n/* harmony import */ var _border__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./border */ \"./develop-react/styles/border.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"blackBorder\", function() { return _border__WEBPACK_IMPORTED_MODULE_1__[\"blackBorder\"]; });\n\n/* harmony import */ var _flexbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./flexbox */ \"./develop-react/styles/flexbox.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flex\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flex\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flexColumn\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flexColumn\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flexCenter\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flexCenter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"justifyCenter\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"justifyCenter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceAround\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"justifyContentSpaceAround\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceBetween\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"justifyContentSpaceBetween\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"alignCenter\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"alignCenter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceAround\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"alignSpaceAround\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceBetween\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"alignSpaceBetween\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flexGrow\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flexGrow\"]; });\n\n/* harmony import */ var _profile_picture__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile-picture */ \"./develop-react/styles/profile-picture.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"picture\", function() { return _profile_picture__WEBPACK_IMPORTED_MODULE_3__[\"picture\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"image\", function() { return _profile_picture__WEBPACK_IMPORTED_MODULE_3__[\"image\"]; });\n\n/* harmony import */ var _margins__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./margins */ \"./develop-react/styles/margins.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"marginXAuto\", function() { return _margins__WEBPACK_IMPORTED_MODULE_4__[\"marginXAuto\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"marginTop32\", function() { return _margins__WEBPACK_IMPORTED_MODULE_4__[\"marginTop32\"]; });\n\n/* harmony import */ var _padding__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./padding */ \"./develop-react/styles/padding.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingY32\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingY32\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingX32\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingX32\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingY16\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingY16\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingX16\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingX16\"]; });\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./develop-react/styles/index.js?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/margins.js":
+/*!*****************************************!*\
+  !*** ./develop-react/styles/margins.js ***!
+  \*****************************************/
+/*! exports provided: marginXAuto, marginTop32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"marginXAuto\", function() { return marginXAuto; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"marginTop32\", function() { return marginTop32; });\nvar marginXAuto = {\n  marginLeft: \"auto\",\n  marginRight: \"auto\"\n};\nvar marginTop32 = {\n  marginTop: \"32px\"\n};\n\n//# sourceURL=webpack:///./develop-react/styles/margins.js?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/padding.js":
+/*!*****************************************!*\
+  !*** ./develop-react/styles/padding.js ***!
+  \*****************************************/
+/*! exports provided: paddingY32, paddingX32, paddingY16, paddingX16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingY32\", function() { return paddingY32; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingX32\", function() { return paddingX32; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingY16\", function() { return paddingY16; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingX16\", function() { return paddingX16; });\nvar paddingY32 = {\n  paddingTop: \"32px\",\n  paddingBottom: \"32px\"\n};\nvar paddingX32 = {\n  paddingLeft: \"32px\",\n  paddingTop: \"32px\"\n};\nvar paddingY16 = {\n  paddingTop: \"16px\",\n  paddingBottom: \"16px\"\n};\nvar paddingX16 = {\n  paddingLeft: \"16px\",\n  paddingTop: \"16px\"\n};\n\n//# sourceURL=webpack:///./develop-react/styles/padding.js?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/page-size.js":
+/*!*******************************************!*\
+  !*** ./develop-react/styles/page-size.js ***!
+  \*******************************************/
+/*! exports provided: a4, card, letter, fullHeight, fullWidth */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a4\", function() { return a4; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"card\", function() { return card; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"letter\", function() { return letter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fullHeight\", function() { return fullHeight; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fullWidth\", function() { return fullWidth; });\nvar a4 = {\n  height: \"297mm\",\n  width: \"210mm\"\n};\nvar card = {\n  height: \"53.98mm\",\n  width: \"85.6mm\"\n};\nvar letter = {\n  height: \"279mm\",\n  width: \"216mm\"\n};\nvar fullHeight = {\n  height: \"100%\"\n};\nvar fullWidth = {\n  width: \"100%\"\n};\n\n//# sourceURL=webpack:///./develop-react/styles/page-size.js?");
+
+/***/ }),
+
+/***/ "./develop-react/styles/profile-picture.js":
+/*!*************************************************!*\
+  !*** ./develop-react/styles/profile-picture.js ***!
+  \*************************************************/
+/*! exports provided: picture, image */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"picture\", function() { return picture; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"image\", function() { return image; });\nvar picture = {\n  height: \"auto\",\n  maxWidth: \"120px\"\n};\nvar image = {\n  height: \"auto\",\n  width: \"100%\"\n};\n\n//# sourceURL=webpack:///./develop-react/styles/profile-picture.js?");
+
+/***/ }),
 
 /***/ "./node_modules/brcast/dist/brcast.es.js":
 /*!***********************************************!*\
@@ -1866,137 +1997,6 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports) {
 
 eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpackPolyfill) {\n\t\tvar module = Object.create(originalModule);\n\t\t// module.parent = undefined by default\n\t\tif (!module.children) module.children = [];\n\t\tObject.defineProperty(module, \"loaded\", {\n\t\t\tenumerable: true,\n\t\t\tget: function() {\n\t\t\t\treturn module.l;\n\t\t\t}\n\t\t});\n\t\tObject.defineProperty(module, \"id\", {\n\t\t\tenumerable: true,\n\t\t\tget: function() {\n\t\t\t\treturn module.i;\n\t\t\t}\n\t\t});\n\t\tObject.defineProperty(module, \"exports\", {\n\t\t\tenumerable: true\n\t\t});\n\t\tmodule.webpackPolyfill = 1;\n\t}\n\treturn module;\n};\n\n\n//# sourceURL=webpack:///(webpack)/buildin/harmony-module.js?");
-
-/***/ }),
-
-/***/ "./react/basic/index.js":
-/*!******************************!*\
-  !*** ./react/basic/index.js ***!
-  \******************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-jss */ \"./node_modules/react-jss/lib/index.js\");\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components */ \"./react/components/index.js\");\n/* harmony import */ var _images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/donald-duck.jpg */ \"./react/images/donald-duck.jpg\");\n/* harmony import */ var _images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles */ \"./react/styles/index.js\");\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n\n\n\nvar styles = {\n  root: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_5__[\"flex\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"fullHeight\"]),\n  lhs: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexGrow\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"paddingX16\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"paddingY16\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexColumn\"], _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexCenter\"]),\n  rhs: _objectSpread({\n    flex: \"0 0 120px\"\n  }, _styles__WEBPACK_IMPORTED_MODULE_5__[\"flexCenter\"]),\n  contentRow: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_5__[\"paddingY16\"]),\n  picture: _styles__WEBPACK_IMPORTED_MODULE_5__[\"picture\"],\n  image: _styles__WEBPACK_IMPORTED_MODULE_5__[\"image\"]\n};\n\nvar BasicContent = function BasicContent(_ref) {\n  var classes = _ref.classes;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__[\"PageSize\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"basic_root\",\n    className: classes.root\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: classes.lhs\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"firstName\",\n    className: classes.contentRow\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"lastName\",\n    className: classes.contentRow\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"email\",\n    className: classes.contentRow\n  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: classes.rhs\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: classes.picture\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _images_donald_duck_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,\n    className: classes.image,\n    alt: \"Donal Duck\"\n  })))));\n}; // Finally, inject the stylesheet into the component.\n\n\nvar StyledComponent = react_jss__WEBPACK_IMPORTED_MODULE_2___default()(styles)(BasicContent);\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledComponent, null), document.getElementById(\"index\"));\n\n//# sourceURL=webpack:///./react/basic/index.js?");
-
-/***/ }),
-
-/***/ "./react/components/index.js":
-/*!***********************************!*\
-  !*** ./react/components/index.js ***!
-  \***********************************/
-/*! exports provided: PageSize */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-element */ \"./react/components/page-element.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"PageSize\", function() { return _page_element__WEBPACK_IMPORTED_MODULE_0__[\"PageSize\"]; });\n\n\n\n//# sourceURL=webpack:///./react/components/index.js?");
-
-/***/ }),
-
-/***/ "./react/components/page-element.js":
-/*!******************************************!*\
-  !*** ./react/components/page-element.js ***!
-  \******************************************/
-/*! exports provided: PageSize */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"PageSize\", function() { return StyledComponent; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-jss */ \"./node_modules/react-jss/lib/index.js\");\n/* harmony import */ var react_jss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles */ \"./react/styles/index.js\");\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\nvar styles = {\n  a4: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_2__[\"a4\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"blackBorder\"]),\n  card: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_2__[\"card\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"blackBorder\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginXAuto\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginTop32\"]),\n  letter: _objectSpread({}, _styles__WEBPACK_IMPORTED_MODULE_2__[\"letter\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"blackBorder\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginXAuto\"], _styles__WEBPACK_IMPORTED_MODULE_2__[\"marginTop32\"])\n};\n\nvar Component =\n/*#__PURE__*/\nfunction (_React$Component) {\n  _inherits(Component, _React$Component);\n\n  function Component(props) {\n    var _this;\n\n    _classCallCheck(this, Component);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Component).call(this, props));\n    _this.state = {\n      classSize: null\n    };\n    return _this;\n  }\n\n  _createClass(Component, [{\n    key: \"componentWillMount\",\n    value: function componentWillMount() {\n      var classes = this.props.classes;\n      var urlParams = new URLSearchParams(location.search);\n      console.log(urlParams.get('size') === \"card\");\n\n      if (urlParams.get('size') === \"A4\") {\n        this.setState({\n          classSize: classes.a4\n        });\n      } else if (urlParams.get('size') === \"card\") {\n        this.setState({\n          classSize: classes.card\n        });\n      } else if (urlParams.get('size') === \"letter\") {\n        this.setState({\n          classSize: classes.letter\n        });\n      } else {\n        this.setState({\n          classSize: classes.a4\n        });\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var classes = this.props.classes;\n      var urlParams = new URLSearchParams(location.search);\n      var className;\n      console.log(urlParams.get('size'));\n      var _iteratorNormalCompletion = true;\n      var _didIteratorError = false;\n      var _iteratorError = undefined;\n\n      try {\n        for (var _iterator = urlParams[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n          var p = _step.value;\n          console.log(p);\n        }\n      } catch (err) {\n        _didIteratorError = true;\n        _iteratorError = err;\n      } finally {\n        try {\n          if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n            _iterator[\"return\"]();\n          }\n        } finally {\n          if (_didIteratorError) {\n            throw _iteratorError;\n          }\n        }\n      }\n\n      console.log(urlParams.get('size') === \"card\");\n\n      if (urlParams.get('size') === \"a4\") {\n        // this.setState({ classSize: classes.a4 })\n        className = classes.a4;\n      } else if (urlParams.get('size') === \"card\") {\n        // this.setState({ classSize: classes.card });\n        className = classes.card;\n      } else if (urlParams.get('size') === \"letter\") {\n        // this.setState({ classSize: classes.letter })\n        className = classes.letter;\n      } else {\n        // this.setState({ classSize: classes.a4 });\n        className = classes.a4;\n      }\n\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        id: \"loadedRoot\",\n        className: className\n      }, this.props.children);\n    }\n  }]);\n\n  return Component;\n}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // Finally, inject the stylesheet into the component.\n\n\nvar StyledComponent = react_jss__WEBPACK_IMPORTED_MODULE_1___default()(styles)(Component);\n\n\n//# sourceURL=webpack:///./react/components/page-element.js?");
-
-/***/ }),
-
-/***/ "./react/images/donald-duck.jpg":
-/*!**************************************!*\
-  !*** ./react/images/donald-duck.jpg ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"images/donald-duck.jpg\";\n\n//# sourceURL=webpack:///./react/images/donald-duck.jpg?");
-
-/***/ }),
-
-/***/ "./react/styles/border.js":
-/*!********************************!*\
-  !*** ./react/styles/border.js ***!
-  \********************************/
-/*! exports provided: blackBorder */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"blackBorder\", function() { return blackBorder; });\nvar blackBorder = {\n  border: \"1px solid black\",\n  boxSizing: \"border-box\"\n};\n\n//# sourceURL=webpack:///./react/styles/border.js?");
-
-/***/ }),
-
-/***/ "./react/styles/flexbox.js":
-/*!*********************************!*\
-  !*** ./react/styles/flexbox.js ***!
-  \*********************************/
-/*! exports provided: flex, flexColumn, flexCenter, justifyCenter, justifyContentSpaceAround, justifyContentSpaceBetween, alignCenter, alignSpaceAround, alignSpaceBetween, flexGrow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flex\", function() { return flex; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flexColumn\", function() { return flexColumn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flexCenter\", function() { return flexCenter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"justifyCenter\", function() { return justifyCenter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceAround\", function() { return justifyContentSpaceAround; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceBetween\", function() { return justifyContentSpaceBetween; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alignCenter\", function() { return alignCenter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceAround\", function() { return alignSpaceAround; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceBetween\", function() { return alignSpaceBetween; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"flexGrow\", function() { return flexGrow; });\nvar flex = {\n  display: \"flex\"\n};\nvar flexColumn = {\n  display: \"flex\",\n  flexDirection: \"column\"\n};\nvar flexCenter = {\n  display: \"flex\",\n  justifyContent: \"center\",\n  alignItems: \"center\"\n};\nvar justifyCenter = {\n  display: \"flex\",\n  justifyContent: \"center\"\n};\nvar justifyContentSpaceAround = {\n  display: \"flex\",\n  justifyContent: \"space-around\"\n};\nvar justifyContentSpaceBetween = {\n  display: \"flex\",\n  justifyContent: \"space-between\"\n};\nvar alignCenter = {\n  display: \"flex\",\n  alignItems: \"center\"\n};\nvar alignSpaceAround = {\n  display: \"flex\",\n  alignItems: \"space-around\"\n};\nvar alignSpaceBetween = {\n  display: \"flex\",\n  alignItems: \"space-between\"\n};\nvar flexGrow = {\n  flex: 1\n};\n\n//# sourceURL=webpack:///./react/styles/flexbox.js?");
-
-/***/ }),
-
-/***/ "./react/styles/index.js":
-/*!*******************************!*\
-  !*** ./react/styles/index.js ***!
-  \*******************************/
-/*! exports provided: a4, card, letter, fullHeight, fullWidth, blackBorder, flex, flexColumn, flexCenter, justifyCenter, justifyContentSpaceAround, justifyContentSpaceBetween, alignCenter, alignSpaceAround, alignSpaceBetween, flexGrow, picture, image, marginXAuto, marginTop32, paddingY32, paddingX32, paddingY16, paddingX16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page_size__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page-size */ \"./react/styles/page-size.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"a4\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"a4\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"card\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"card\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"letter\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"letter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"fullHeight\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"fullHeight\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"fullWidth\", function() { return _page_size__WEBPACK_IMPORTED_MODULE_0__[\"fullWidth\"]; });\n\n/* harmony import */ var _border__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./border */ \"./react/styles/border.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"blackBorder\", function() { return _border__WEBPACK_IMPORTED_MODULE_1__[\"blackBorder\"]; });\n\n/* harmony import */ var _flexbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./flexbox */ \"./react/styles/flexbox.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flex\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flex\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flexColumn\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flexColumn\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flexCenter\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flexCenter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"justifyCenter\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"justifyCenter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceAround\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"justifyContentSpaceAround\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"justifyContentSpaceBetween\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"justifyContentSpaceBetween\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"alignCenter\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"alignCenter\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceAround\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"alignSpaceAround\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"alignSpaceBetween\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"alignSpaceBetween\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"flexGrow\", function() { return _flexbox__WEBPACK_IMPORTED_MODULE_2__[\"flexGrow\"]; });\n\n/* harmony import */ var _profile_picture__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./profile-picture */ \"./react/styles/profile-picture.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"picture\", function() { return _profile_picture__WEBPACK_IMPORTED_MODULE_3__[\"picture\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"image\", function() { return _profile_picture__WEBPACK_IMPORTED_MODULE_3__[\"image\"]; });\n\n/* harmony import */ var _margins__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./margins */ \"./react/styles/margins.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"marginXAuto\", function() { return _margins__WEBPACK_IMPORTED_MODULE_4__[\"marginXAuto\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"marginTop32\", function() { return _margins__WEBPACK_IMPORTED_MODULE_4__[\"marginTop32\"]; });\n\n/* harmony import */ var _padding__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./padding */ \"./react/styles/padding.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingY32\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingY32\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingX32\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingX32\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingY16\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingY16\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"paddingX16\", function() { return _padding__WEBPACK_IMPORTED_MODULE_5__[\"paddingX16\"]; });\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./react/styles/index.js?");
-
-/***/ }),
-
-/***/ "./react/styles/margins.js":
-/*!*********************************!*\
-  !*** ./react/styles/margins.js ***!
-  \*********************************/
-/*! exports provided: marginXAuto, marginTop32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"marginXAuto\", function() { return marginXAuto; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"marginTop32\", function() { return marginTop32; });\nvar marginXAuto = {\n  marginLeft: \"auto\",\n  marginRight: \"auto\"\n};\nvar marginTop32 = {\n  marginTop: \"32px\"\n};\n\n//# sourceURL=webpack:///./react/styles/margins.js?");
-
-/***/ }),
-
-/***/ "./react/styles/padding.js":
-/*!*********************************!*\
-  !*** ./react/styles/padding.js ***!
-  \*********************************/
-/*! exports provided: paddingY32, paddingX32, paddingY16, paddingX16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingY32\", function() { return paddingY32; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingX32\", function() { return paddingX32; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingY16\", function() { return paddingY16; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"paddingX16\", function() { return paddingX16; });\nvar paddingY32 = {\n  paddingTop: \"32px\",\n  paddingBottom: \"32px\"\n};\nvar paddingX32 = {\n  paddingLeft: \"32px\",\n  paddingTop: \"32px\"\n};\nvar paddingY16 = {\n  paddingTop: \"16px\",\n  paddingBottom: \"16px\"\n};\nvar paddingX16 = {\n  paddingLeft: \"16px\",\n  paddingTop: \"16px\"\n};\n\n//# sourceURL=webpack:///./react/styles/padding.js?");
-
-/***/ }),
-
-/***/ "./react/styles/page-size.js":
-/*!***********************************!*\
-  !*** ./react/styles/page-size.js ***!
-  \***********************************/
-/*! exports provided: a4, card, letter, fullHeight, fullWidth */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a4\", function() { return a4; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"card\", function() { return card; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"letter\", function() { return letter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fullHeight\", function() { return fullHeight; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fullWidth\", function() { return fullWidth; });\nvar a4 = {\n  height: \"297mm\",\n  width: \"210mm\"\n};\nvar card = {\n  height: \"53.98mm\",\n  width: \"85.6mm\"\n};\nvar letter = {\n  height: \"279mm\",\n  width: \"216mm\"\n};\nvar fullHeight = {\n  height: \"100%\"\n};\nvar fullWidth = {\n  width: \"100%\"\n};\n\n//# sourceURL=webpack:///./react/styles/page-size.js?");
-
-/***/ }),
-
-/***/ "./react/styles/profile-picture.js":
-/*!*****************************************!*\
-  !*** ./react/styles/profile-picture.js ***!
-  \*****************************************/
-/*! exports provided: picture, image */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"picture\", function() { return picture; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"image\", function() { return image; });\nvar picture = {\n  height: \"auto\",\n  maxWidth: \"120px\"\n};\nvar image = {\n  height: \"auto\",\n  width: \"100%\"\n};\n\n//# sourceURL=webpack:///./react/styles/profile-picture.js?");
 
 /***/ })
 

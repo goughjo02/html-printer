@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        basic: './react/basic'
+        basic: './develop-react/basic'
     },
     output: {
         path: path.resolve(__dirname, 'build/'),
@@ -30,7 +30,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'images',
+                            outputPath: '../images',
                         },
                     },
                 ]
@@ -47,7 +47,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             filename: 'basic/index.html',
-            template: 'react/index.html'
+            template: 'develop-react/index.html'
         })
     ]
 };
