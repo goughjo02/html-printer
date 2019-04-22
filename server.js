@@ -6,15 +6,17 @@ const port = 3000
 
 new class BasicPrinter extends io.Entrypoint {
   // This is the very first method called on startup
-  async onStart(cb) {  
-        const app = express();
-        app.use(serveStatic('build', {'index': ['basic.html', 'basic.htm']}))
-        this.server =  app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+  async onStart(cb) {
+    const app = express();
+    app.use("/images/", express.static(__dirname + '/build/images'));
+    app.use("/basic/", express.static(__dirname + '/build/basic'));
+    app.use(serveStatic('build/basic'))
+    this.server = app.listen(port, () => console.log(`Example app listening on port ${port}!`))
   }
 
   // This is the very last method called on exit || uncaught exception
   onStop(err, cb, code, signal) {
-      this.server.close();
+    this.server.close();
     console.log(`App has exited with code ${code}`)
   }
 

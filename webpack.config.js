@@ -9,7 +9,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build/'),
         // publicPath: "/build/",
-        filename: '[name].js'
+        filename: '[name]/index.js'
     },
     module: {
         rules: [
@@ -46,7 +46,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'basic.html',
+            filename: 'basic/index.html',
             template: 'react/index.html'
         })
     ]
