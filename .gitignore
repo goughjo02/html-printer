@@ -1,5 +1,6 @@
 node_modules
 # build
+example-results
 ./result.pdf
 .DS_STORE
 result.pdf
