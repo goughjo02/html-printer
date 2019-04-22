@@ -1,6 +1,6 @@
 node_modules
 # build
-example-results
+tests/generated-pdfs
 ./result.pdf
 .DS_STORE
 result.pdf

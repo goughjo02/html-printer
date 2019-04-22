@@ -22,7 +22,7 @@ const printBasic = function (firstName, lastName, email, size, pageSize, fileNam
         }, e[0], e[1]))
       })
       const resolvedfinalArray = await Promise.all(editArray); // resolving all promises
-      const result = await page.pdf({ path: `./example-results/${fileName}.pdf`, format: 'A4' });
+      const result = await page.pdf({ path: `${fileName}.pdf`, format: 'A4' });
       await page.close();
       await browser.disconnect();
       resolve(result);
