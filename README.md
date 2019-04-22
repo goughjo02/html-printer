@@ -32,7 +32,7 @@ Process entry file, `app.js`, does the following:
 `pm2 monit` brings up the pm2 monitor
 `pm2 kill` to stop pm2 
 
- ![pm2-example](./examples-images/pm2-example.png)
+ ![pm2-example](./example-images/pm2-example.png)
 
  # API
 
@@ -51,13 +51,13 @@ Process entry file, `app.js`, does the following:
  - page size options: 'A4', 'Card', 'Letter'
  - size options: 'A4', 'Card', 'Letter'
 
- ![pm2-example](./examples-images/query-example.png)
+ ![pm2-example](./example-images/query-example.png)
 
 **urlencoded** body is for page details
 
 `{ [key: string] : string }`
 
- ![pm2-example](./examples-images/body-example.png)
+ ![pm2-example](./example-images/body-example.png)
 
  # Develop Template
 
@@ -92,7 +92,7 @@ Process entry file, `app.js`, does the following:
  <div id="email">donnyd@feathermail.com</div>
  ````
 
- ![result-example](./examples-images/example-result.png)
+ ![result-example](./example-images/example-result.png)
 
  This project uses webpack to transpile es6 into es5. See `webpack.config.js`.
  

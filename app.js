@@ -1,6 +1,4 @@
 const io = require('@pm2/io');
-const express = require('express');
-var serveStatic = require('serve-static');
 // var path = require('path');
 const puppeteer = require('puppeteer');
 const httpProxy = require("http-proxy");
@@ -19,16 +17,19 @@ async function createServer(WSEndPoint, host, port) {
 new class Browser extends io.Entrypoint {
   // This is the very first method called on startup
   async onStart(cb) {
-    const app = express();
+    console.log('Launching puppeteer');
     this.browser = await puppeteer.launch();
     const pagesCount = (await this.browser.pages()).length;
     const browserWSEndpoint = this.browser.wsEndpoint();
+    console.log('Creating http proxy');
     const customWSEndpoint = await createServer(browserWSEndpoint, host, port);
+    console.log('http proxy created');
     console.log({ browserWSEndpoint, customWSEndpoint, pagesCount });
   }
 
   // This is the very last method called on exit || uncaught exception
   onStop(err, cb, code, signal) {
+    console.log('Closing browser');
     this.browser.close();
     console.log(`App has exited with code ${code}`)
   }

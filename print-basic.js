@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 var path = require('path');
 
 const printBasic = async function (firstName, lastName, email, size, pageSize) {
+  console.log('printing basic');
   let address = 'file:///' + path.resolve(__dirname, "build/basic/index.html");
   address = address + `?size=${size}&pageSize=${pageSize}`;
   address = address + `?firstName=${firstName}&lastName=${lastName}&email=${email}`;
@@ -9,7 +10,6 @@ const printBasic = async function (firstName, lastName, email, size, pageSize) {
     browserWSEndpoint: `ws://0.0.0.0:8080`,
     ignoreHTTPSErrors: true
   }).then(async browser => {
-    console.log(firstName, lastName, email, size, pageSize)
     const page = await browser.newPage();
     await page.goto(address, { waitUntil: 'networkidle0' });
     let editArray = [];
