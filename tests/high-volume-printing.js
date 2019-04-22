@@ -41,9 +41,9 @@ const multiRuns = function (shot_interval) {
     })
 }
 
-multiRuns(350).then(results => {
+multiRuns(250).then(results => {
     // console.log(results)
-    fs.writeFile("./results/delay-350ms-1000-prints-results.csv", results, function (err) {
+    fs.writeFile("./results/delay-250ms-take-2-1000-prints-1-instance-cluster-results.csv", results, function (err) {
         if (err) {
             return console.log(err);
         }
